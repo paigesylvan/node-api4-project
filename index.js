@@ -1,15 +1,14 @@
+require('dotenv').config();
+
 const express = require('express');
 
 const server = express();
-
 
 server.use(express.json());
 
 server.get('/about', (req, res) => {
     res.json('This is the about page.')
 })
-
-
 
 const port = process.env.PORT || 9000
 
